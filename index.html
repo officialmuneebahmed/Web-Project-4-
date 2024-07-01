@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3; url=https://google.com/"> -->
+    <title>Document</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+    <h1 class="h1-top">Simple Login System v1.0</h1>
+    <div class="main-div">
+        <form class="container">
+            <fieldset class="field-1"><legend>Username / Password</legend> 
+                <input class="input-1" type="email" alt="email" title="Email" placeholder="Email" onkeydown="return /[A-Za-z0-9/_/@/.]/i.test(event.key)" maxlength="30"  autofocus required > 
+                <ul>
+                    <li class="symb">* Only AlphaNumerics and _ allowed</li>
+                </ul>
+                <input class="input-1" type="password" alt="password" title="Password" placeholder="Password" onkeydown="return /[A-Za-z0-9/!/@/#/$/%/^/&/\*/(/)/]/i.test(event.key)" maxlength="30"  autofocus required >
+                <ul>
+                    <li class="symb">* Alphabets allowed</li>
+                    <li class="symb">* Numerals allowed</li>
+                    <li class="symb">* 0 - 9 keys symbols allowed</li>
+                </ul>
+            </fieldset>
+            <fieldset class="field-2"><legend>LogIn</legend> 
+                <p><input type="checkbox" required>Accept <a href="#">Terms</a> and <a href="#">Conditions</a></p>
+                <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                <input class="input-2" type="submit" value="Login" title="Log in"></fieldset>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/a19de92425.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        // Mouse Enter JQuery
+        $(document).ready(function () {
+            $(".input-2").mouseenter(function (){
+                $(".input-2").css("transition", "0.5s ease-in");
+            });
+
+        // Mouse Out JQurey
+        $(".input-2").mouseleave(function (){
+            $(".input-2").css("transition", "0.5s ease-out");
+        });
+    });
+    </script>
+</body>
+</html>
